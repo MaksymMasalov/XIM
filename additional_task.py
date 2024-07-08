@@ -94,21 +94,21 @@ base_ws = {'Columns View': 'columns',
            'Row Height': 'row_height',
            'Highlight By': 'color_conditions'}
 
-result = {'columns': [{'index': 'so_list_so_number', 'sort': 0},
-                      {'index': 'so_list_client_po', 'sort': 1},
-                      {'index': 'so_list_terms_of_sale', 'sort': 2}],
-          'order_by': {'direction': 'asc', 'index': 'so_list_terms_of_sale'},
-          'conditions_data': {'so_no': [{'type': 'equals', 'value': 'S110'},
-                                        {'type': 'equals', 'value': 'S111'}],
-                              'client_po': [{'type': 'equals', 'value': 'P110'}]},
-          'page_size': '25',
-          'row_height': '60',
-          'color_conditions': {'so_no': [{'type': 'equals', 'value': 'S110', 'color': 'rgba(172,86,86,1)'}],
-                               'client_po': [{'type': 'equals', 'value': 'S110', 'color': ''},
-                                             {'type': 'equals', 'value': 'S111', 'color': ''}],
-                               'term_sale': [{'type': 'equals', 'value': 'S113', 'color': ''},
-                                             {'type': 'equals', 'value': 'S112', 'color': ''}]},
-          'module': 'SO'}
+# result = {'columns': [{'index': 'so_list_so_number', 'sort': 0},
+#                       {'index': 'so_list_client_po', 'sort': 1},
+#                       {'index': 'so_list_terms_of_sale', 'sort': 2}],
+#           'order_by': {'direction': 'asc', 'index': 'so_list_terms_of_sale'},
+#           'conditions_data': {'so_no': [{'type': 'equals', 'value': 'S110'},
+#                                         {'type': 'equals', 'value': 'S111'}],
+#                               'client_po': [{'type': 'equals', 'value': 'P110'}]},
+#           'page_size': '25',
+#           'row_height': '60',
+#           'color_conditions': {'so_no': [{'type': 'equals', 'value': 'S110', 'color': 'rgba(172,86,86,1)'}],
+#                                'client_po': [{'type': 'equals', 'value': 'S110', 'color': ''},
+#                                              {'type': 'equals', 'value': 'S111', 'color': ''}],
+#                                'term_sale': [{'type': 'equals', 'value': 'S113', 'color': ''},
+#                                              {'type': 'equals', 'value': 'S112', 'color': ''}]},
+#           'module': 'SO'}
 
 result = parse_table(table, websocket_response, base_ws)
 print(json.dumps(result, indent=4))
